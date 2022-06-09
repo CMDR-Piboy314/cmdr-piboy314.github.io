@@ -1,2 +1,5 @@
 /* I hate CSS - why are you reading this code */
-
+body {
+	background-color: black;
+	color: white;
+}
