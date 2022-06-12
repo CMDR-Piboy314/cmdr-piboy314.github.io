@@ -1,0 +1,139 @@
+body {
+    background: linear-gradient(to right, white, lemonchiffon);
+    padding: 15px;
+    font-family: Verdana;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background: teal;
+    padding: 5px;
+}
+
+h2 {
+    color: white;
+    background: teal;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    box-shadow: 2px 2px 2px gray;
+    text-align: center;
+}
+
+img {
+    max-width: 95%;
+}
+
+.link:hover {
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+.column1 {
+    width: 48%;
+    float: left;
+}
+
+.column2 {
+    width: 48%;
+    float: right;
+}
+
+.photo {
+    box-shadow: 4px 4px 4px gray;
+    transform: rotate(10deg);
+}
+
+.item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 3px dashed teal;
+}
+
+.item:hover {
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+}
+
+.lightbox{
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    background: rgba(0,0,0,0.8);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.lightbox:target {
+    visibility: visible;
+}
+
+#robots {
+    font-size: 30px;
+    color: white;
+    background: linear-gradient(green, yellow, orange, red, purple, blue);
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#greenrobot {
+    height: 100px;
+    position: absolute;
+    left: -200px;
+    animation: greenrobot 5s infinite;
+}
+
+#greenrobot:hover {
+    animation-play-state: paused;
+}
+
+@keyframes greenrobot {
+    0% {left: -200px}
+    50% {left: 0}
+    100% {left: -200px}
+}
+
+#spacerobot {
+    height: 50px;
+    position: absolute;
+    animation: spacerobot 15s infinite linear;
+}
+
+@keyframes spacerobot{
+    0% {
+        left: 0px;
+        transform: rotate(0deg);
+    }
+    50% {
+        left: 95%;
+        transform: rotate(360deg);
+    }
+    100% {
+        left: 0px;
+        transform: rotate(0deg);
+    }
+}
+
+#spacerobot:hover {
+    animation-play-state: paused;
+    /* animation: spin 5s infinite linear; */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
